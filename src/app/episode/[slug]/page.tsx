@@ -40,7 +40,7 @@ export default async function EpisodePage({ params }: PageProps) {
       >
         <Link
           href="/"
-          className="inline-flex items-center gap-3 text-xl font-bold px-6 py-3 rounded-full transition-all duration-200 group hover:bg-[rgba(212,168,83,0.1)] border border-transparent hover:border-[rgba(212,168,83,0.3)]"
+          className="inline-flex items-center gap-3 text-xl font-bold px-6 py-3 rounded-full transition-all duration-200 group bg-[#0a0a0a] border border-[rgba(255,255,255,0.1)] shadow-lg hover:border-[rgba(212,168,83,0.3)] hover:bg-[#1A1F2E]"
           style={{ color: "var(--text-body)" }}
         >
           <svg className="w-6 h-6 group-hover:translate-x-1.5 transition-transform text-gold" style={{ color: "var(--gold)" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
