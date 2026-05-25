@@ -8,9 +8,11 @@ export const metadata: Metadata = {
   description: "مێژووی درامایی دابەزینی قورئانی پیرۆز بە زمانی کوردی",
 };
 
+import { ThemeProvider } from "@/components/ThemeProvider";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ckb" dir="rtl">
+    <html lang="ckb" dir="rtl" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -20,42 +22,44 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        {/* Anti-inspection script */}
-        <Script id="anti-inspect">
-          {`
-              // Disable right click
-              document.addEventListener('contextmenu', event => event.preventDefault());
-              
-              // Disable keyboard shortcuts
-              document.addEventListener('keydown', function (event) {
-                if (event.keyCode == 123) {
-                  event.preventDefault();
-                }
-                if (event.ctrlKey && event.shiftKey && (event.keyCode == 73 || event.keyCode == 74 || event.keyCode == 67)) {
-                  event.preventDefault();
-                }
-                if (event.ctrlKey && (event.keyCode == 85 || event.keyCode == 83 || event.keyCode == 80)) {
-                  event.preventDefault();
-                }
-              });
+        <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem={false}>
+          {/* Anti-inspection script */}
+          <Script id="anti-inspect">
+            {`
+                // Disable right click
+                document.addEventListener('contextmenu', event => event.preventDefault());
+                
+                // Disable keyboard shortcuts
+                document.addEventListener('keydown', function (event) {
+                  if (event.keyCode == 123) {
+                    event.preventDefault();
+                  }
+                  if (event.ctrlKey && event.shiftKey && (event.keyCode == 73 || event.keyCode == 74 || event.keyCode == 67)) {
+                    event.preventDefault();
+                  }
+                  if (event.ctrlKey && (event.keyCode == 85 || event.keyCode == 83 || event.keyCode == 80)) {
+                    event.preventDefault();
+                  }
+                });
 
-              // Prevent copying and dragging
-              document.addEventListener('dragstart', event => event.preventDefault());
-              document.addEventListener('copy', event => event.preventDefault());
+                // Prevent copying and dragging
+                document.addEventListener('dragstart', event => event.preventDefault());
+                document.addEventListener('copy', event => event.preventDefault());
 
-              // Anti-debugging trap
-              setInterval(function() {
-                var before = new Date().getTime();
-                debugger;
-                var after = new Date().getTime();
-                if (after - before > 100) {
-                  document.body.innerHTML = "Access Denied.";
-                }
-              }, 1000);
-            `}
-        </Script>
-        <TextSizeController />
-        {children}
+                // Anti-debugging trap
+                setInterval(function() {
+                  var before = new Date().getTime();
+                  debugger;
+                  var after = new Date().getTime();
+                  if (after - before > 100) {
+                    document.body.innerHTML = "Access Denied.";
+                  }
+                }, 1000);
+              `}
+          </Script>
+          <TextSizeController />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

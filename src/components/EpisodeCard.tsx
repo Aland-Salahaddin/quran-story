@@ -8,7 +8,7 @@ export default function EpisodeCard({ episode, index }: { episode: Episode; inde
       <Link href={`/episode/${episode.slug}`} className="block group">
         <div
           className="surface rounded-xl px-6 py-6 flex items-center gap-5 transition-all duration-300
-                     group-hover:border-[rgba(212,168,83,0.35)] group-hover:bg-[#1A1F2E]"
+                     group-hover:border-[rgba(212,168,83,0.35)] group-hover:bg-[var(--surface-2)]"
         >
           {/* Number */}
           <span

@@ -2,6 +2,7 @@ import StarField from "@/components/StarField";
 import IntroNotice from "@/components/IntroNotice";
 import EpisodeCard from "@/components/EpisodeCard";
 import { getAllEpisodes } from "@/lib/episodes";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default function HomePage() {
   const episodes = getAllEpisodes();
@@ -11,6 +12,9 @@ export default function HomePage() {
       <StarField />
 
       {/* ── HERO ── */}
+      <div className="absolute top-6 right-6 z-50">
+        <ThemeSwitcher />
+      </div>
       <header className="relative z-10 pt-20 pb-12 text-center px-4">
         {/* Subtle top glow */}
         <div

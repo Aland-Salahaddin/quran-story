@@ -2,6 +2,7 @@ import { getEpisodeBySlug, getAllEpisodes, ContentBlock } from "@/lib/episodes";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import StarField from "@/components/StarField";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 import type { Metadata } from "next";
 
 interface PageProps {
@@ -35,8 +36,8 @@ export default async function EpisodePage({ params }: PageProps) {
 
       {/* ── TOP BAR ── */}
       <nav
-        className="sticky top-0 z-40 flex items-center justify-between px-4 md:px-12 lg:px-24 xl:px-32 py-[19px] w-full bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[rgba(255,255,255,0.06)] shadow-lg"
-        style={{ direction: "rtl" }}
+        className="sticky top-0 z-40 flex items-center justify-between px-4 md:px-12 lg:px-24 xl:px-32 py-[19px] w-full backdrop-blur-md shadow-lg"
+        style={{ direction: "rtl", background: "var(--surface)", borderBottom: "1px solid var(--border)" }}
       >
         <Link
           href="/"
@@ -48,6 +49,7 @@ export default async function EpisodePage({ params }: PageProps) {
           </svg>
           <span className="group-hover:text-gold transition-colors translate-x-[3px]">گەڕانەوە</span>
         </Link>
+        <ThemeSwitcher />
       </nav>
 
       {/* ── HEADER ── */}
