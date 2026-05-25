@@ -22,21 +22,35 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Anti-inspection script */}
         <Script id="anti-inspect">
           {`
+              // Disable right click
               document.addEventListener('contextmenu', event => event.preventDefault());
+              
+              // Disable keyboard shortcuts
               document.addEventListener('keydown', function (event) {
                 if (event.keyCode == 123) {
                   event.preventDefault();
                 }
-                if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                if (event.ctrlKey && event.shiftKey && (event.keyCode == 73 || event.keyCode == 74 || event.keyCode == 67)) {
                   event.preventDefault();
                 }
-                if (event.ctrlKey && event.shiftKey && event.keyCode == 74) {
-                  event.preventDefault();
-                }
-                if (event.ctrlKey && event.keyCode == 85) {
+                if (event.ctrlKey && (event.keyCode == 85 || event.keyCode == 83 || event.keyCode == 80)) {
                   event.preventDefault();
                 }
               });
+
+              // Prevent copying and dragging
+              document.addEventListener('dragstart', event => event.preventDefault());
+              document.addEventListener('copy', event => event.preventDefault());
+
+              // Anti-debugging trap
+              setInterval(function() {
+                var before = new Date().getTime();
+                debugger;
+                var after = new Date().getTime();
+                if (after - before > 100) {
+                  document.body.innerHTML = "Access Denied.";
+                }
+              }, 1000);
             `}
         </Script>
         {children}
