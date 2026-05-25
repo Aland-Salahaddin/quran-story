@@ -28,13 +28,7 @@ export default function HomePage() {
           زنجیرەی قورئان
         </h1>
 
-        {/* Subtitle */}
-        <p
-          className="text-2xl max-w-2xl mx-auto leading-relaxed anim-up d-2"
-          style={{ color: "var(--text-sub)" }}
-        >
-          مێژووی درامایی دابەزینی قورئانی پیرۆز، ئەڵقە ئەڵقە
-        </p>
+
 
         {/* Divider */}
         <div className="flex items-center justify-center gap-3 mt-8 anim-up d-3">
