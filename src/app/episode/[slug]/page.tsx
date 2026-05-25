@@ -93,7 +93,7 @@ export default async function EpisodePage({ params }: PageProps) {
 
         {episode.content.length === 0 ? (
           /* ── Placeholder shell ── */
-          <div className="space-y-5 anim-up d-2">
+          <div className="space-y-10 anim-up d-2">
             {/* Placeholder paragraphs */}
             {[
               "لۆرێم ئیپسوم دۆلۆر سیت ئەمێت، کۆنسێکتێتوور ئەدیپیسسینگ ئێلیت. سێد دو ئێیوسمۆد تێمپۆر ئینسیدیدونت ئوت لابۆرێ ئێت دۆلۆرێ مەگنا ئەلیقوا. ئوت ئێنیم ئەد مینیم ڤێنیام، قوییس نۆسترود ئێکسێرسیتاسیۆن ئوللامکۆ لابۆریس نیسی ئوت ئەلیقویپ ئێکس ئێا کۆممۆدۆ کۆنسێقواتریم.",
@@ -123,7 +123,7 @@ export default async function EpisodePage({ params }: PageProps) {
           </div>
         ) : (
           /* ── Real content ── */
-          <div className="space-y-5 anim-up d-2">
+          <div className="space-y-10 anim-up d-2">
             {episode.content.map((block: ContentBlock, i: number) => (
               <Block key={i} block={block} />
             ))}
@@ -191,7 +191,7 @@ function Block({ block }: { block: ContentBlock }) {
   }
   if (block.type === "info") {
     return (
-      <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 text-xl md:text-2xl py-6 px-8 rounded-xl bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)] mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 text-xl md:text-2xl py-6 px-8 rounded-xl bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)] mb-16">
         <span className="font-bold text-gold min-w-[100px] md:min-w-[120px] flex-shrink-0">{block.label}:</span>
         <span style={{ color: "var(--text-body)" }}>{block.text}</span>
       </div>
