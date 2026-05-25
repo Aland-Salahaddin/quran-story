@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import TextSizeController from "@/components/TextSizeController";
 
 export const metadata: Metadata = {
   title: "زنجیرەی قورئان",
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               }, 1000);
             `}
         </Script>
+        <TextSizeController />
         {children}
       </body>
     </html>
