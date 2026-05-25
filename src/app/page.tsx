@@ -45,7 +45,7 @@ export default function HomePage() {
       </header>
 
       {/* ── CONTENT ── */}
-      <div className="relative z-10 max-w-3xl mx-auto px-4 pb-24 space-y-8">
+      <div className="relative z-10 w-full px-4 md:px-12 lg:px-24 xl:px-32 pb-24 space-y-8">
 
         {/* Intro Notice */}
         <IntroNotice />
