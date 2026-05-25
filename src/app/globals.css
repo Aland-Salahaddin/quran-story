@@ -134,3 +134,8 @@ body {
   background: var(--gold);
   cursor: pointer;
 }
+
+/* ── Specific spacing adjustments ── */
+.info-panel + .story-paragraph {
+  margin-top: 6rem !important;
+}

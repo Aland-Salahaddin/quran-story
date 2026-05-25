@@ -99,7 +99,7 @@ export default async function EpisodePage({ params }: PageProps) {
               "لۆرێم ئیپسوم دۆلۆر سیت ئەمێت، کۆنسێکتێتوور ئەدیپیسسینگ ئێلیت. سێد دو ئێیوسمۆد تێمپۆر ئینسیدیدونت ئوت لابۆرێ ئێت دۆلۆرێ مەگنا ئەلیقوا. ئوت ئێنیم ئەد مینیم ڤێنیام، قوییس نۆسترود ئێکسێرسیتاسیۆن ئوللامکۆ لابۆریس نیسی ئوت ئەلیقویپ ئێکس ئێا کۆممۆدۆ کۆنسێقواتریم.",
               "دوییس ئاوتێ ئیرورێ دۆلۆر ئین رێپرێهێندێریت ئین ڤۆلوپتاتێ ڤێلیت ئێسسێ سیللوم دۆلۆرێ ئێو فوگیات نوللا پاریاتور. ئێکسسێپتێور سینت ئۆككاێكات كوپیداتات نۆن پرۆیدێنت، سونت ئین كولپا قوی ئۆففیسیا دێسێرونت مۆللیت ئەنیم ئید ئێست لابۆروم.",
             ].map((t, i) => (
-              <p key={i} className="text-2xl md:text-3xl leading-loose" style={{ color: "var(--text-body)", paddingRight: "20px" }}>{t}</p>
+              <p key={i} className="story-paragraph text-2xl md:text-3xl leading-loose" style={{ color: "var(--text-body)", paddingRight: "20px" }}>{t}</p>
             ))}
 
             {/* Placeholder verse */}
@@ -108,7 +108,7 @@ export default async function EpisodePage({ params }: PageProps) {
               kurdish="بخوێنەرەوە بە ناوی پەروەردگارت، ئەوەی کە دەیافرێنێ"
             />
 
-            <p className="text-2xl md:text-3xl leading-loose" style={{ color: "var(--text-body)", paddingRight: "20px" }}>
+            <p className="story-paragraph text-2xl md:text-3xl leading-loose" style={{ color: "var(--text-body)", paddingRight: "20px" }}>
               ئوت ئێنیم ئەد مینیم ڤێنیام، قوییس نۆسترود ئێکسێرسیتاسیۆن. لۆرێم ئیپسوم دۆلۆر سیت ئەمێت، کۆنسێکتێتوور ئەدیپیسسینگ ئێلیت، سێد دو ئێیوسمۆد تێمپۆر ئینسیدیدونت ئوت لابۆرێ ئێت دۆلۆرێ مەگنا ئەلیقوا.
             </p>
 
@@ -117,7 +117,7 @@ export default async function EpisodePage({ params }: PageProps) {
               kurdish="مرۆڤی دروستکرد لە خوێنەکەمە"
             />
 
-            <p className="text-2xl md:text-3xl leading-loose" style={{ color: "var(--text-body)", paddingRight: "20px" }}>
+            <p className="story-paragraph text-2xl md:text-3xl leading-loose" style={{ color: "var(--text-body)", paddingRight: "20px" }}>
               سێد دو ئێیوسمۆد تێمپۆر ئینسیدیدونت ئوت لابۆرێ ئێت دۆلۆرێ مەگنا ئەلیقوا. ئوت ئێنیم ئەد مینیم ڤێنیام، قوییس نۆسترود ئێکسێرسیتاسیۆن ئوللامکۆ لابۆریس نیسی ئوت.
             </p>
           </div>
@@ -177,7 +177,7 @@ export default async function EpisodePage({ params }: PageProps) {
 function Block({ block }: { block: ContentBlock }) {
   if (block.type === "paragraph") {
     return (
-      <p className="text-2xl md:text-3xl leading-loose" style={{ color: "var(--text-body)", paddingRight: "20px", marginBottom: "1.5rem" }}>
+      <p className="story-paragraph text-2xl md:text-3xl leading-loose" style={{ color: "var(--text-body)", paddingRight: "20px", marginBottom: "1.5rem" }}>
         {block.text}
       </p>
     );
@@ -191,7 +191,7 @@ function Block({ block }: { block: ContentBlock }) {
   }
   if (block.type === "info") {
     return (
-      <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 text-xl md:text-2xl py-6 px-8 rounded-xl bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)] mb-16">
+      <div className="info-panel flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 text-xl md:text-2xl py-6 px-8 rounded-xl bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)] mb-2">
         <span className="font-bold text-gold min-w-[100px] md:min-w-[120px] flex-shrink-0">{block.label}:</span>
         <span style={{ color: "var(--text-body)" }}>{block.text}</span>
       </div>
