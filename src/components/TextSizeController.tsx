@@ -26,7 +26,7 @@ export default function TextSizeController() {
 
   return (
     <div 
-      className="fixed bottom-[24px] left-[24px] z-50 flex items-center gap-[8px] bg-[#0d1117] border border-[rgba(212,168,83,0.4)] p-[4px] rounded-full shadow-2xl" 
+      className="fixed bottom-[24px] left-[24px] z-50 flex items-center gap-[8px] bg-[var(--surface)] border border-[rgba(212,168,83,0.4)] p-[4px] rounded-full shadow-2xl" 
       style={{ direction: "ltr" }}
     >
       <button 

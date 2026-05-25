@@ -82,11 +82,11 @@ export default function IntroNotice() {
         </div>
 
         {/* Body text */}
-        <p className="text-base leading-loose" style={{ color: "#E2E8F0" }}>
+        <p className="text-base leading-loose" style={{ color: "var(--text-body)" }}>
           بەم شێوازە، ئێمە لەمەودوا ڕێک لەگەڵ هێڵی کاتیدا دەڕۆین. لە ئەڵقەی یەکەمدا تەنها{" "}
-          <strong style={{ color: "#FED7AA", fontWeight: 700 }}>٥ ئایەتەکەی سەرەتای سورەتی عەلەق</strong>{" "}
+          <strong style={{ color: "var(--gold)", fontWeight: 700 }}>٥ ئایەتەکەی سەرەتای سورەتی عەلەق</strong>{" "}
           باس دەکەین، چونکە{" "}
-          <strong style={{ color: "#FED7AA", fontWeight: 700 }}>تەنها ئەو پێنج ئایەتە لە ساڵی ٦١٠ زایینیدا بوونیان هەبوو</strong>.
+          <strong style={{ color: "var(--gold)", fontWeight: 700 }}>تەنها ئەو پێنج ئایەتە لە ساڵی ٦١٠ زایینیدا بوونیان هەبوو</strong>.
         </p>
       </div>
     </section>
