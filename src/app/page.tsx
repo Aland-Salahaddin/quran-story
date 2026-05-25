@@ -54,7 +54,7 @@ export default function HomePage() {
         </div>
 
         {/* Episodes */}
-        <div className="space-y-3">
+        <div className="space-y-6">
           {episodes.map((ep, i) => (
             <EpisodeCard key={ep.id} episode={ep} index={i} />
           ))}
