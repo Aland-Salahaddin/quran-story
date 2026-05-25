@@ -55,9 +55,9 @@ export default async function EpisodePage({ params }: PageProps) {
         {/* Meta pills */}
         <div className="flex flex-wrap gap-3 mb-6">
           {[
-            { text: episode.surah, icon: "📖" },
-            { text: episode.year, icon: "📅" }
-          ].map((item, i) => (
+            episode.surah,
+            episode.year
+          ].map((text, i) => (
             <span
               key={i}
               className="inline-flex items-center gap-3 text-lg px-8 py-3 rounded-full font-bold shadow-sm"
@@ -67,8 +67,7 @@ export default async function EpisodePage({ params }: PageProps) {
                 border: "1px solid rgba(212,168,83,0.2)",
               }}
             >
-              <span className="text-xl" style={{ color: "var(--gold)" }}>{item.icon}</span>
-              <span>{item.text}</span>
+              <span>{text}</span>
             </span>
           ))}
         </div>
