@@ -89,7 +89,7 @@ export default async function EpisodePage({ params }: PageProps) {
       </header>
 
       {/* ── STORY BODY ── */}
-      <article className="relative z-10 w-full px-4 md:px-12 lg:px-24 xl:px-32 pb-24">
+      <article className="relative z-10 w-full px-4 md:px-12 lg:px-24 xl:px-32 pb-48">
 
         {episode.content.length === 0 ? (
           /* ── Placeholder shell ── */
