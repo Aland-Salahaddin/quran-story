@@ -64,7 +64,7 @@ export default async function EpisodePage({ params }: PageProps) {
               style={{
                 background: "rgba(212,168,83,0.06)",
                 color: "var(--text-body)",
-                border: "1px solid rgba(212,168,83,0.2)",
+                border: "3px solid rgba(212,168,83,0.4)",
               }}
             >
               <span>{text}</span>
