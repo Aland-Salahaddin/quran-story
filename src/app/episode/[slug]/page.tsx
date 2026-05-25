@@ -35,7 +35,7 @@ export default async function EpisodePage({ params }: PageProps) {
 
       {/* ── TOP BAR ── */}
       <nav
-        className="sticky top-0 z-40 flex items-center justify-between px-4 py-4 max-w-3xl mx-auto"
+        className="sticky top-0 z-40 flex items-center justify-between px-4 md:px-12 lg:px-24 xl:px-32 py-4 w-full"
         style={{ direction: "rtl" }}
       >
         <Link
@@ -51,7 +51,7 @@ export default async function EpisodePage({ params }: PageProps) {
       </nav>
 
       {/* ── HEADER ── */}
-      <header className="relative z-10 max-w-3xl mx-auto px-4 pt-6 pb-10">
+      <header className="relative z-10 w-full px-4 md:px-12 lg:px-24 xl:px-32 pt-6 pb-10">
         {/* Meta pills */}
         <div className="flex flex-wrap gap-3 mb-6">
           {[
@@ -89,7 +89,7 @@ export default async function EpisodePage({ params }: PageProps) {
       </header>
 
       {/* ── STORY BODY ── */}
-      <article className="relative z-10 max-w-3xl mx-auto px-4 pb-24">
+      <article className="relative z-10 w-full px-4 md:px-12 lg:px-24 xl:px-32 pb-24">
 
         {episode.content.length === 0 ? (
           /* ── Placeholder shell ── */
