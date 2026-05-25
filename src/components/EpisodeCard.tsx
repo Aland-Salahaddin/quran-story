@@ -12,7 +12,7 @@ export default function EpisodeCard({ episode, index }: { episode: Episode; inde
         >
           {/* Number */}
           <span
-            className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold"
+            className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center text-xl font-bold"
             style={{ background: "rgba(212,168,83,0.1)", color: "var(--gold)" }}
           >
             {String(episode.id).padStart(2, "0")}
@@ -21,20 +21,20 @@ export default function EpisodeCard({ episode, index }: { episode: Episode; inde
           {/* Text */}
           <div className="flex-1 min-w-0">
             <p
-              className="font-semibold text-base leading-snug transition-colors duration-200 group-hover:text-gold"
+              className="font-semibold text-2xl leading-snug transition-colors duration-200 group-hover:text-gold"
               style={{ color: "var(--text-body)" }}
             >
               {episode.titleKu}
             </p>
-            <p className="text-sm mt-0.5 truncate" style={{ color: "var(--text-muted)" }}>
+            <p className="text-lg mt-0.5 truncate" style={{ color: "var(--text-muted)" }}>
               {episode.subtitleKu}
             </p>
           </div>
 
           {/* Meta */}
-          <div className="hidden sm:flex items-center gap-3 flex-shrink-0 text-xs" style={{ color: "var(--text-muted)", fontFamily: "system-ui", direction: "ltr" }}>
+          <div className="hidden sm:flex items-center gap-3 flex-shrink-0 text-base" style={{ color: "var(--text-muted)", fontFamily: "system-ui", direction: "ltr" }}>
             <span
-              className="px-2 py-0.5 rounded-full"
+              className="px-3 py-1 rounded-full"
               style={{ background: "rgba(212,168,83,0.08)", color: "var(--gold)" }}
             >
               {episode.surah}
@@ -69,8 +69,8 @@ function LockedCard({ episode }: { episode: Episode }) {
         </svg>
       </span>
       <div className="flex-1 min-w-0">
-        <p className="font-semibold text-base" style={{ color: "var(--text-sub)" }}>{episode.titleKu}</p>
-        <p className="text-sm mt-0.5" style={{ color: "var(--text-muted)" }}>بەم زووانە دێت…</p>
+        <p className="font-semibold text-2xl" style={{ color: "var(--text-sub)" }}>{episode.titleKu}</p>
+        <p className="text-lg mt-0.5" style={{ color: "var(--text-muted)" }}>بەم زووانە دێت…</p>
       </div>
     </div>
   );

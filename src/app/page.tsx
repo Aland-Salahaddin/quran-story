@@ -24,13 +24,13 @@ export default function HomePage() {
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 heading-gradient anim-up d-1">
+        <h1 className="text-6xl md:text-8xl font-bold mb-4 heading-gradient anim-up d-1">
           زنجیرەی قورئان
         </h1>
 
         {/* Subtitle */}
         <p
-          className="text-lg max-w-lg mx-auto leading-relaxed anim-up d-2"
+          className="text-2xl max-w-2xl mx-auto leading-relaxed anim-up d-2"
           style={{ color: "var(--text-sub)" }}
         >
           مێژووی درامایی دابەزینی قورئانی پیرۆز، ئەڵقە ئەڵقە
@@ -53,7 +53,7 @@ export default function HomePage() {
         {/* Section Label */}
         <div className="flex items-center gap-3 pt-2 anim-up d-4">
           <div className="h-px flex-1" style={{ background: "var(--border)" }} />
-          <p className="text-xs tracking-widest" style={{ color: "var(--text-muted)" }}>
+          <p className="text-base tracking-widest" style={{ color: "var(--text-muted)" }}>
             ئەڵقەکان
           </p>
           <div className="h-px flex-1" style={{ background: "var(--border)" }} />
@@ -68,13 +68,13 @@ export default function HomePage() {
 
         {/* Coming soon */}
         <div className="text-center py-4 anim-up">
-          <p className="text-sm" style={{ color: "var(--text-muted)" }}>ئەڵقەکانی تر بەم زووانە دێن</p>
+          <p className="text-lg" style={{ color: "var(--text-muted)" }}>ئەڵقەکانی تر بەم زووانە دێن</p>
         </div>
       </div>
 
       {/* Footer */}
       <footer className="relative z-10 text-center py-6 px-4" style={{ borderTop: "1px solid var(--border)" }}>
-        <p className="text-xs" style={{ color: "var(--text-muted)" }}>زنجیرەی قورئان · کوردی سۆرانی</p>
+        <p className="text-base" style={{ color: "var(--text-muted)" }}>زنجیرەی قورئان · کوردی سۆرانی</p>
       </footer>
     </main>
   );
