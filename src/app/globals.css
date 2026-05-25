@@ -137,5 +137,5 @@ body {
 
 /* ── Specific spacing adjustments ── */
 .info-panel + .story-paragraph {
-  margin-top: 57px !important;
+  margin-top: 50px !important;
 }
