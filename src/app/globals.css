@@ -67,12 +67,14 @@ body {
 /* Gold text */
 .text-gold { color: var(--gold); }
 
-/* Gradient text for headings */
+/* ── TEXT GRADIENTS ── */
 .heading-gradient {
-  background: linear-gradient(135deg, #F0C97A 0%, var(--gold) 60%, #B8860B 100%);
+  background: linear-gradient(135deg, #FFDF8D 0%, #D4A853 50%, #9F7A34 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #D4A853; /* Fallback */
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 }
 
 /* ── Animations ────────────────────────────────────── */
