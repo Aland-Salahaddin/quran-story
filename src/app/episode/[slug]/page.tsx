@@ -191,8 +191,8 @@ function Block({ block }: { block: ContentBlock }) {
   }
   if (block.type === "info") {
     return (
-      <div className="info-panel flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 text-xl md:text-2xl py-6 px-8 rounded-xl bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)] mb-2">
-        <span className="font-bold text-gold min-w-[100px] md:min-w-[120px] flex-shrink-0">{block.label}:</span>
+      <div className="info-panel flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 text-xl md:text-2xl py-6 px-8 rounded-xl bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)] mb-2">
+        <span className="font-bold text-gold min-w-[60px] md:min-w-[70px] flex-shrink-0">{block.label}:</span>
         <span style={{ color: "var(--text-body)" }}>{block.text}</span>
       </div>
     );
