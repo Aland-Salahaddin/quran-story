@@ -5,7 +5,16 @@ import TextSizeController from "@/components/TextSizeController";
 
 export const metadata: Metadata = {
   title: "زنجیرەی قورئان",
-  description: "مێژووی درامایی دابەزینی قورئانی پیرۆز بە زمانی کوردی",
+  description: "مێژووی دابەزینی قورئانی پیرۆز بە زمانی کوردی",
+};
+
+import { Viewport } from "next";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 import { ThemeProvider } from "@/components/ThemeProvider";
