@@ -49,7 +49,9 @@ export default async function EpisodePage({ params }: PageProps) {
           </svg>
           <span className="group-hover:text-gold transition-colors translate-x-[3px]">گەڕانەوە</span>
         </Link>
-        <ThemeSwitcher />
+        <div className="ml-4 md:ml-8">
+          <ThemeSwitcher />
+        </div>
       </nav>
 
       {/* ── HEADER ── */}
