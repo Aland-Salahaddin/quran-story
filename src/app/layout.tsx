@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import TextSizeController from "@/components/TextSizeController";
 
 export const metadata: Metadata = {
   title: "زنجیرەی قورئان",
@@ -18,6 +19,8 @@ import { Viewport } from "next";
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -70,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 }, 1000);
               `}
           </Script>
+          <TextSizeController />
           {children}
           <Analytics />
         </ThemeProvider>
