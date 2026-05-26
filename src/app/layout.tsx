@@ -5,6 +5,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "زنجیرەی قورئان",
   description: "مێژووی دابەزینی قورئانی پیرۆز بە زمانی کوردی",
+  openGraph: {
+    title: "زنجیرەی قورئان",
+    description: "مێژووی دابەزینی قورئانی پیرۆز بە زمانی کوردی",
+    type: "website",
+    url: "https://zinjireyquran.vercel.app/",
+  },
 };
 
 import { Viewport } from "next";
