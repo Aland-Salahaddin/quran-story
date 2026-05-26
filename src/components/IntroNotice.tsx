@@ -64,7 +64,7 @@ export default function IntroNotice() {
 
       {/* ── CRITICAL ALERT — 610 AD ── */}
       <div
-        className="rounded-xl p-5 md:p-6 space-y-3"
+        className="rounded-2xl p-5 md:p-6 space-y-3"
         style={{
           background: "rgba(234,88,12,0.1)",
           border: "1px solid rgba(234,88,12,0.3)",

@@ -7,7 +7,7 @@ export default function EpisodeCard({ episode, index }: { episode: Episode; inde
     <div className="anim-up" style={{ animationDelay: `${index * 0.07}s` }}>
       <Link href={`/episode/${episode.slug}`} className="block group">
         <div
-          className="surface rounded-xl px-6 py-6 flex items-center gap-5 transition-all duration-300
+          className="surface rounded-2xl px-6 py-6 flex items-center gap-5 transition-all duration-300
                      group-hover:border-[rgba(212,168,83,0.35)] group-hover:bg-[var(--surface-2)]"
         >
           {/* Number */}
@@ -58,7 +58,7 @@ export default function EpisodeCard({ episode, index }: { episode: Episode; inde
 function LockedCard({ episode }: { episode: Episode }) {
   return (
     <div
-      className="surface rounded-xl px-6 py-6 flex items-center gap-5 opacity-40 cursor-not-allowed select-none"
+      className="surface rounded-2xl px-6 py-6 flex items-center gap-5 opacity-40 cursor-not-allowed select-none"
     >
       <span
         className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center"

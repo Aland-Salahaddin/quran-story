@@ -141,7 +141,7 @@ export default async function EpisodePage({ params }: PageProps) {
             {prev ? (
               <Link
                 href={`/episode/${prev.slug}`}
-                className="surface rounded-xl p-4 transition-all duration-200 hover:border-[rgba(212,168,83,0.3)] group"
+                className="surface rounded-2xl p-4 transition-all duration-200 hover:border-[rgba(212,168,83,0.3)] group"
               >
                 <p className="text-xs mb-1 flex items-center gap-1" style={{ color: "var(--text-muted)" }}>
                   <svg className="w-3 h-3 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
@@ -156,7 +156,7 @@ export default async function EpisodePage({ params }: PageProps) {
             {next ? (
               <Link
                 href={`/episode/${next.slug}`}
-                className="surface rounded-xl p-4 text-left transition-all duration-200 hover:border-[rgba(212,168,83,0.3)] group"
+                className="surface rounded-2xl p-4 text-left transition-all duration-200 hover:border-[rgba(212,168,83,0.3)] group"
               >
                 <p className="text-xs mb-1 flex items-center justify-end gap-1" style={{ color: "var(--text-muted)" }}>
                   دواتر
@@ -193,7 +193,7 @@ function Block({ block }: { block: ContentBlock }) {
   }
   if (block.type === "info") {
     return (
-      <div className="info-panel flex flex-col sm:flex-row sm:items-start gap-[6px] sm:gap-[14px] text-xl md:text-2xl py-6 px-8 rounded-xl bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)] mb-2">
+      <div className="info-panel flex flex-col sm:flex-row sm:items-start gap-[6px] sm:gap-[14px] text-xl md:text-2xl py-6 px-8 rounded-2xl bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)] mb-2">
         <span className="font-bold text-gold min-w-[58px] md:min-w-[68px] flex-shrink-0">{block.label}:</span>
         <span style={{ color: "var(--text-body)" }}>{block.text}</span>
       </div>
