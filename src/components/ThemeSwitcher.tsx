@@ -23,7 +23,7 @@ export default function ThemeSwitcher() {
   return (
     <button
       onClick={() => setTheme(isLight ? "dark" : "light")}
-      className="flex items-center gap-2.5 px-6 py-3 rounded-full transition-all duration-300 font-bold group text-[16px]"
+      className="flex items-center gap-2.5 px-6 py-3 rounded-xl transition-all duration-300 font-bold group text-[16px]"
       style={{
         background: "rgba(212,168,83,0.1)",
         color: "var(--gold)",
