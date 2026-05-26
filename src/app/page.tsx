@@ -12,7 +12,7 @@ export default function HomePage() {
       <StarField />
 
       {/* ── HERO ── */}
-      <div className="absolute top-6 right-[18px] z-50">
+      <div className="absolute top-6 right-[8px] z-50">
         <ThemeSwitcher />
       </div>
       <header className="relative z-10 pt-20 pb-12 text-center px-4">
