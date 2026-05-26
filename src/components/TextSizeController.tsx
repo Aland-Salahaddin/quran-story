@@ -26,26 +26,75 @@ export default function TextSizeController() {
 
   return (
     <div 
-      className="fixed bottom-6 left-6 z-50 flex items-center gap-2 bg-[var(--surface)] border border-[rgba(212,168,83,0.4)] p-1 rounded-full shadow-2xl" 
-      style={{ direction: "ltr" }}
+      style={{ 
+        position: "fixed",
+        bottom: "24px",
+        left: "24px",
+        zIndex: 50,
+        display: "flex", 
+        alignItems: "center", 
+        gap: "8px", 
+        background: "var(--surface)", 
+        border: "1px solid rgba(212,168,83,0.4)", 
+        padding: "4px", 
+        borderRadius: "9999px", 
+        direction: "ltr",
+        boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
+      }}
     >
       <button 
         onClick={decrease}
         disabled={scale <= 1}
-        className="w-10 h-10 rounded-full flex items-center justify-center text-2xl font-medium hover:bg-[rgba(212,168,83,0.1)] disabled:opacity-30 disabled:hover:bg-transparent transition-all"
-        style={{ color: "var(--gold)", lineHeight: "1" }}
+        className="hover:bg-[rgba(212,168,83,0.1)] disabled:opacity-30 disabled:hover:bg-transparent transition-all"
+        style={{ 
+          width: "40px", 
+          height: "40px", 
+          borderRadius: "9999px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "22px", 
+          fontWeight: 500,
+          color: "var(--gold)", 
+          lineHeight: "1",
+          background: "transparent",
+          border: "none",
+          cursor: "pointer"
+        }}
         aria-label="Decrease text size"
       >
         −
       </button>
-      <span className="text-sm font-bold w-12 text-center" style={{ color: "var(--text-body)" }}>
+      <span 
+        style={{ 
+          fontSize: "14px", 
+          fontWeight: 700, 
+          width: "48px", 
+          textAlign: "center",
+          color: "var(--text-body)" 
+        }}
+      >
         {toKurdishDigits(scale * 100)}٪
       </span>
       <button 
         onClick={increase}
         disabled={scale >= 2}
-        className="w-10 h-10 rounded-full flex items-center justify-center text-2xl font-medium hover:bg-[rgba(212,168,83,0.1)] disabled:opacity-30 disabled:hover:bg-transparent transition-all"
-        style={{ color: "var(--gold)", lineHeight: "1" }}
+        className="hover:bg-[rgba(212,168,83,0.1)] disabled:opacity-30 disabled:hover:bg-transparent transition-all"
+        style={{ 
+          width: "40px", 
+          height: "40px", 
+          borderRadius: "9999px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "22px", 
+          fontWeight: 500,
+          color: "var(--gold)", 
+          lineHeight: "1",
+          background: "transparent",
+          border: "none",
+          cursor: "pointer"
+        }}
         aria-label="Increase text size"
       >
         +
